@@ -15,15 +15,20 @@ import client.RaspyLarmClient;
 public class AlarmController {
 
 	private final String ALARM_DAY_ACTIVE_COLOR = "-fx-background-color: red";
-	final String ALARM_DAY_INACTIVE_COLOR = "-fx-background-color: blue";
+	final String ALARM_DAY_INACTIVE_COLOR = "-fx-background-color: white";
 	private final Button[] weekdays;
 	private Alarm alarm;
 	private final TextField alarmName;
+	private final CheckBox alarmActivated;
+	private final TextField alarmCommand;
 
 	public AlarmController(Button monday, Button tuesday, Button wednesday, Button thursday, Button friday, Button saturday, Button sunday,
-			Button plusHour, Button plusMinute, Button minusHour, Button minusMinute, TextField alarmName, CheckBox alarmActivated) {
+			Button plusHour, Button plusMinute, Button minusHour, Button minusMinute, TextField alarmName, CheckBox alarmActivated,
+			TextField alarmCommand) {
 
 		this.alarmName = alarmName;
+		this.alarmActivated = alarmActivated;
+		this.alarmCommand = alarmCommand;
 		weekdays = new Button[7];
 		weekdays[0] = monday;
 		weekdays[1] = tuesday;
@@ -48,7 +53,6 @@ public class AlarmController {
 					handleAlarm(newValue);
 				}
 			}
-
 		});
 	}
 
@@ -70,18 +74,10 @@ public class AlarmController {
 
 	private void handleAlarm(Boolean newValue) {
 		alarm.setActive(newValue);
-		if (newValue) {
-			try {
-				RaspyLarmClient.getInstance().startAlarm(alarm);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		} else {
-			try {
-				RaspyLarmClient.getInstance().stopAlarm(alarm);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+		try {
+			RaspyLarmClient.getInstance().sendToServer(alarm);
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 
@@ -94,6 +90,7 @@ public class AlarmController {
 				weekdays[i].setStyle(ALARM_DAY_INACTIVE_COLOR);
 			}
 		}
+		alarmActivated.setSelected(alarm.isActive());
 		this.alarm = alarm;
 	}
 }

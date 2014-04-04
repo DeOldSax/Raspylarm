@@ -1,6 +1,7 @@
 package model;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleStringProperty;
@@ -8,6 +9,7 @@ import javafx.beans.property.StringProperty;
 
 public class Alarm implements Serializable {
 
+	private final UUID uuid = UUID.randomUUID();
 	private static final long serialVersionUID = 1729409145617866229L;
 	private static int numberObAlarms = 0;
 	private boolean active;
@@ -21,7 +23,7 @@ public class Alarm implements Serializable {
 		alarmName = new SimpleStringProperty("Alarm " + numberObAlarms);
 		alertDays = new Boolean[7];
 		for (int i = 0; i < alertDays.length; i++) {
-			alertDays[i] = true;
+			alertDays[i] = false;
 		}
 	}
 
@@ -59,7 +61,29 @@ public class Alarm implements Serializable {
 
 	@Override
 	public String toString() {
+		if (alarmName == null) {
+			return "";
+		}
 		return alarmName.get();
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj != null) {
+			if (obj instanceof Alarm) {
+				return uuid.equals(((Alarm) obj).uuid);
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public int hashCode() {
+		return uuid.hashCode();
+	}
+
+	public Property<Boolean> activeProperty() {
+		return null;
 	}
 
 }

@@ -6,21 +6,16 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 import model.Alarm;
+import model.ArgumentManager;
+
+import org.apache.log4j.Logger;
 
 public class RaspyLarmClient {
+	final Logger LOGGER = Logger.getLogger(getClass());
 	private static RaspyLarmClient instance;
 	private Socket socket;
-	private final String ip = "";
-	private final int port = 0;
 
 	private RaspyLarmClient() {
-		try {
-			socket = new Socket(ip, port);
-		} catch (UnknownHostException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 	}
 
 	public static RaspyLarmClient getInstance() {
@@ -30,18 +25,27 @@ public class RaspyLarmClient {
 		return instance;
 	}
 
-	public void startAlarm(Alarm alarm) throws IOException {
-		sendToServer(alarm);
-	}
-
-	public void stopAlarm(Alarm alarm) throws IOException {
-		sendToServer(alarm);
-	}
-
-	private void sendToServer(Alarm alarm) throws IOException {
+	public void sendToServer(Alarm alarm) throws IOException {
+		socket = createSocket();
 		ObjectOutputStream writer = new ObjectOutputStream(socket.getOutputStream());
 		writer.writeObject(alarm);
 		writer.flush();
+		LOGGER.debug("Send Alarm " + alarm + " to server.");
+	}
+
+	private Socket createSocket() {
+		final String ip = ArgumentManager.getInstance().getIp();
+		final int port = ArgumentManager.getInstance().getPort();
+		Socket socket = null;
+		try {
+			socket = new Socket(ip, port);
+		} catch (UnknownHostException e) {
+			LOGGER.error("Connection failed.", e);
+		} catch (IOException e) {
+			LOGGER.error("Connection failed.", e);
+		}
+
+		return socket;
 	}
 
 }
