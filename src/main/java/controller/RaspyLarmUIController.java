@@ -5,8 +5,10 @@ import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.util.Callback;
 import model.Alarm;
 import model.Alarms;
 
@@ -32,6 +34,12 @@ public class RaspyLarmUIController {
 		});
 		alarms.setEditable(true);
 
+		alarms.setCellFactory(new Callback<ListView<Alarm>, ListCell<Alarm>>() {
+			public ListCell<Alarm> call(ListView<Alarm> list) {
+				return new AlarmListCell();
+			}
+		});
+
 		activateAlarmOnRaspy.setOnAction(new EventHandler<ActionEvent>() {
 			public void handle(ActionEvent event) {
 				activateAlarmOnRaspy();
@@ -50,8 +58,16 @@ public class RaspyLarmUIController {
 		controller.getAlarmController().setAlarm(newAlarm);
 	}
 
-	private class EditingListCell extends ListCell<Alarm> {
-
+	private class AlarmListCell extends ListCell<Alarm> {
+		@Override
+		protected void updateItem(Alarm alarm, boolean empty) {
+			super.updateItem(alarm, empty);
+			if (alarm != null) {
+				final CheckBox checkBox = new CheckBox(alarm.toString());
+				setGraphic(checkBox);
+				checkBox.selectedProperty().bindBidirectional(alarm.activeProperty());
+			}
+		}
 	}
 
 }

@@ -27,7 +27,11 @@ public class Scheduler implements Runnable {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		LOGGER.debug("Alarm " + alarm + " accepted.");
+		LOGGER.debug("Alarm " + alarm + " connected.");
+		if (alarm.isActivatePrompt()) {
+			new Thread(new AlarmTask(alarm)).start();
+			return;
+		}
 		if (alarm.isActive()) {
 			LOGGER.debug("Call server startAlarm");
 			server.startAlarmSheduling(alarm);

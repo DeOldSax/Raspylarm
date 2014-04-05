@@ -6,7 +6,6 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import model.Alarm;
@@ -59,16 +58,22 @@ public class Controller implements Initializable {
 	private Button minusMinute;
 
 	@FXML
-	private CheckBox alarmActivated;
+	private TextField alarmCommand;
 
 	@FXML
-	private TextField alarmCommand;
+	private TextField alarmHour;
+
+	@FXML
+	private TextField alarmMinute;
+
+	@FXML
+	private Button executeCommand;
 
 	private AlarmController alarmController;
 
 	public void initialize(URL url, ResourceBundle rb) {
 		alarmController = new AlarmController(monday, tuesday, wednesday, thursday, friday, saturday, sunday, plusHour, plusMinute,
-				minusHour, minusMinute, alarmName, alarmActivated, alarmCommand);
+				minusHour, minusMinute, alarmName, alarmCommand, alarmHour, alarmMinute, executeCommand);
 		new RaspyLarmUIController(this, createNewAlarm, activateAlarmOnRaspy, alarms);
 	}
 
