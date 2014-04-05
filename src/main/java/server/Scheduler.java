@@ -29,7 +29,7 @@ public class Scheduler implements Runnable {
 		}
 		LOGGER.debug("Alarm " + alarm + " connected.");
 		if (alarm.isActivatePrompt()) {
-			new Thread(new AlarmTask(alarm)).start();
+			new AlarmTimer(alarm).start();
 			return;
 		}
 		if (alarm.isActive()) {

@@ -5,8 +5,6 @@ import java.io.Serializable;
 import java.util.Calendar;
 import java.util.UUID;
 
-import org.apache.log4j.Logger;
-
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.Property;
@@ -16,6 +14,9 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+
+import org.apache.log4j.Logger;
+
 import client.RaspyLarmClient;
 
 public class Alarm implements Serializable {
@@ -23,7 +24,7 @@ public class Alarm implements Serializable {
 	private final UUID uuid = UUID.randomUUID();
 	private static final long serialVersionUID = 1729409145617866229L;
 	private static int numberObAlarms = 0;
-	private boolean active;
+	private boolean active = true;
 	private int alarmHour;
 	private int alarmMinute;
 	private transient IntegerProperty alarmHourProperty;
@@ -37,11 +38,11 @@ public class Alarm implements Serializable {
 
 	public Alarm() {
 		numberObAlarms++;
-		alarmHour = Calendar.HOUR_OF_DAY;
-		alarmMinute = Calendar.MINUTE;
-		alarmHourProperty = new SimpleIntegerProperty(Calendar.HOUR);
-		alarmMinuteProperty = new SimpleIntegerProperty(Calendar.MINUTE);
-		activeProperty = new SimpleBooleanProperty(false);
+		alarmHour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+		alarmMinute = Calendar.getInstance().get(Calendar.MINUTE);
+		alarmHourProperty = new SimpleIntegerProperty(Calendar.getInstance().get(Calendar.HOUR_OF_DAY));
+		alarmMinuteProperty = new SimpleIntegerProperty(Calendar.getInstance().get(Calendar.MINUTE));
+		activeProperty = new SimpleBooleanProperty(true);
 		alarmName = new SimpleStringProperty("Alarm " + numberObAlarms);
 		commandProperty = new SimpleStringProperty();
 		alertDays = new Boolean[7];
@@ -111,15 +112,12 @@ public class Alarm implements Serializable {
 		return active;
 	}
 
-	public void setActive(Boolean newValue) {
-		this.active = newValue;
-	}
-
 	public Property<Boolean> activeProperty() {
 		return activeProperty;
 	}
 
 	public void synchronize() {
+		this.active = activeProperty.get();
 		// TODO create a class that saves all active alarms.
 		// If UI is closed, send all alarms to the server OR
 		// create a button to send all alarms manually

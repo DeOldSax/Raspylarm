@@ -69,11 +69,14 @@ public class Controller implements Initializable {
 	@FXML
 	private Button executeCommand;
 
+	@FXML
+	private Button save;
+
 	private AlarmController alarmController;
 
 	public void initialize(URL url, ResourceBundle rb) {
 		alarmController = new AlarmController(monday, tuesday, wednesday, thursday, friday, saturday, sunday, plusHour, plusMinute,
-				minusHour, minusMinute, alarmName, alarmCommand, alarmHour, alarmMinute, executeCommand);
+				minusHour, minusMinute, alarmName, alarmCommand, alarmHour, alarmMinute, executeCommand, save);
 		new RaspyLarmUIController(this, createNewAlarm, activateAlarmOnRaspy, alarms);
 	}
 

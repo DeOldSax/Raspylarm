@@ -13,12 +13,12 @@ import org.apache.log4j.Logger;
 public class RaspyLarmServer {
 
 	final Logger LOGGER = Logger.getLogger(getClass());
-	private final HashMap<Alarm, AlarmTask> runningAlarmTasks;
+	private final HashMap<Alarm, AlarmTimer> runningAlarmTasks;
 	private ServerSocket server;
 
 	protected RaspyLarmServer(int port) {
 		LOGGER.info("Server initialized with port: " + port);
-		runningAlarmTasks = new HashMap<Alarm, AlarmTask>();
+		runningAlarmTasks = new HashMap<Alarm, AlarmTimer>();
 		try {
 			server = new ServerSocket(port);
 		} catch (IOException e) {
@@ -36,20 +36,18 @@ public class RaspyLarmServer {
 	}
 
 	protected void startAlarmSheduling(Alarm alarm) {
-		final AlarmTask alarmTask = new AlarmTask(alarm);
-		System.out.println(alarm.hashCode());
-		runningAlarmTasks.put(alarm, alarmTask);
-		alarmTask.run();
+		final AlarmTimer alarmTimer = new AlarmTimer(alarm);
+		runningAlarmTasks.put(alarm, alarmTimer);
+		alarmTimer.start();
 	}
 
 	protected void stopAlarm(Alarm alarm) {
-		final AlarmTask alarmSheduler = runningAlarmTasks.get(alarm);
-		if (alarmSheduler != null) {
+		final AlarmTimer alarmTimer = runningAlarmTasks.get(alarm);
+		if (alarmTimer != null) {
 			LOGGER.debug("Call alarm cancel method.");
-			alarmSheduler.cancel();
+			alarmTimer.cancel();
 		} else {
-			System.out.println(alarm.hashCode());
-			LOGGER.info("Alarm was null");
+			LOGGER.error("Alarm was cancel, but wasn't activated.");
 		}
 	}
 }

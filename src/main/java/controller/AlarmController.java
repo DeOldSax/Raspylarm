@@ -21,7 +21,7 @@ public class AlarmController {
 
 	public AlarmController(Button monday, Button tuesday, Button wednesday, Button thursday, Button friday, Button saturday, Button sunday,
 			Button plusHour, Button plusMinute, Button minusHour, Button minusMinute, TextField alarmName, TextField alarmCommand,
-			TextField alarmHour, TextField alarmMinute, Button executeCommand) {
+			TextField alarmHour, TextField alarmMinute, Button executeCommand, Button save) {
 
 		this.alarmName = alarmName;
 		this.alarmCommand = alarmCommand;
@@ -74,6 +74,12 @@ public class AlarmController {
 			public void handle(ActionEvent event) {
 				alarm.ring();
 			}
+		});
+
+		save.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent event) {
+				alarm.synchronize();
+			};
 		});
 		setAlarmSettingsPartVisible(false);
 	}

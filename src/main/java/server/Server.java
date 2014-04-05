@@ -11,6 +11,7 @@ import view.RaspyLarmUI;
 public class Server {
 
 	public static void main(String[] args) {
+		Thread.currentThread().setName("Server");
 		final Logger LOGGER = Logger.getLogger(Server.class);
 		PropertyConfigurator.configure(RaspyLarmUI.class.getResourceAsStream("log4j.properties"));
 		int port = Integer.valueOf(args[0]);

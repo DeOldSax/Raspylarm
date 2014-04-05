@@ -41,9 +41,10 @@
             <Button fx:id="plusMinute" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="+" GridPane.columnIndex="4" GridPane.margin="$x1" GridPane.rowIndex="2" />
             <Button fx:id="minusMinute" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="-" GridPane.columnIndex="4" GridPane.margin="$x2" GridPane.rowIndex="4" />
             <TextField fx:id="alarmMinute" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="-1.0" GridPane.columnIndex="4" GridPane.margin="$x3" GridPane.rowIndex="3" />
-            <TextField fx:id="alarmName" maxWidth="1.7976931348623157E308" prefWidth="-1.0" GridPane.columnIndex="0" GridPane.columnSpan="7" GridPane.rowIndex="0" GridPane.valignment="TOP" />
-            <TextField fx:id="alarmCommand" prefWidth="-1.0" GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="6" />
-            <Button fx:id="executeCommand" maxHeight="-1.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="execute" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+            <TextField fx:id="alarmName" maxWidth="1.7976931348623157E308" prefWidth="-1.0" GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="0" GridPane.valignment="TOP" />
+            <TextField fx:id="alarmCommand" prefWidth="-1.0" GridPane.columnIndex="0" GridPane.columnSpan="5" GridPane.rowIndex="6" GridPane.valignment="BOTTOM" />
+            <Button fx:id="executeCommand" maxHeight="-1.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="execute" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="6" GridPane.valignment="BOTTOM" />
+            <Button fx:id="save" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="save" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="0" GridPane.valignment="TOP" />
           </children>
           <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
