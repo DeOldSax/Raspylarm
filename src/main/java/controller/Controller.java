@@ -71,17 +71,27 @@ public class Controller implements Initializable {
 
 	@FXML
 	private Button save;
+	
+	@FXML
+	private Button synchronizeButton; 
 
 	private AlarmController alarmController;
+	
+	private RaspyLarmUIController uiController; 
 
 	public void initialize(URL url, ResourceBundle rb) {
-		alarmController = new AlarmController(monday, tuesday, wednesday, thursday, friday, saturday, sunday, plusHour, plusMinute,
+		uiController = new RaspyLarmUIController(this, createNewAlarm, activateAlarmOnRaspy, synchronizeButton, alarms);
+		alarmController = new AlarmController(this, monday, tuesday, wednesday, thursday, friday, saturday, sunday, plusHour, plusMinute,
 				minusHour, minusMinute, alarmName, alarmCommand, alarmHour, alarmMinute, executeCommand, save);
-		new RaspyLarmUIController(this, createNewAlarm, activateAlarmOnRaspy, alarms);
 	}
 
 	public AlarmController getAlarmController() {
 		return alarmController;
 	}
+	
+	public RaspyLarmUIController getUiController() {
+		return uiController;
+	}
+	
 
 }

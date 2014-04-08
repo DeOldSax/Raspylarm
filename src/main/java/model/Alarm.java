@@ -1,10 +1,7 @@
 package model;
-
-import java.io.IOException;
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.UUID;
-
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.Property;
@@ -15,12 +12,8 @@ import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 
-import org.apache.log4j.Logger;
-
-import client.RaspyLarmClient;
-
 public class Alarm implements Serializable {
-
+	
 	private final UUID uuid = UUID.randomUUID();
 	private static final long serialVersionUID = 1729409145617866229L;
 	private static int numberObAlarms = 0;
@@ -45,20 +38,23 @@ public class Alarm implements Serializable {
 		activeProperty = new SimpleBooleanProperty(true);
 		alarmName = new SimpleStringProperty("Alarm " + numberObAlarms);
 		commandProperty = new SimpleStringProperty();
+		
 		alertDays = new Boolean[7];
 		for (int i = 0; i < alertDays.length; i++) {
 			alertDays[i] = false;
 		}
 
 		alarmHourProperty.addListener(new ChangeListener<Number>() {
-			public void changed(ObservableValue<? extends Number> arg0, Number arg1, Number arg2) {
-				alarmHour = (Integer) arg2;
+			public void changed(ObservableValue<? extends Number> arg0, Number arg1, Number newValue) {
+				int newTime = checkTimeFormat((Integer)newValue, -1, 24, alarmHourProperty); 
+				alarmHour = newTime; 
 			}
 		});
 
 		alarmMinuteProperty.addListener(new ChangeListener<Number>() {
-			public void changed(ObservableValue<? extends Number> arg0, Number arg1, Number arg2) {
-				alarmMinute = (Integer) arg2;
+			public void changed(ObservableValue<? extends Number> arg0, Number arg1, Number newValue) {
+				int newTime = checkTimeFormat((Integer)newValue, -1, 60, alarmMinuteProperty); 
+				alarmMinute = newTime; 
 			}
 		});
 		commandProperty.addListener(new ChangeListener<String>() {
@@ -66,6 +62,22 @@ public class Alarm implements Serializable {
 				command = arg2;
 			}
 		});
+		activeProperty.addListener(new ChangeListener<Boolean>() {
+			public void changed(ObservableValue<? extends Boolean> arg0, Boolean arg1, Boolean arg2) {
+				active = arg2; 
+			}
+		});
+	}
+	
+	private int checkTimeFormat(int time, int minValue, int maxValue, IntegerProperty p) {
+		int value = p.get(); 
+		if (time == maxValue) {
+			p.set(0);
+		} else if (time == minValue) {
+			p.set(maxValue-1);
+			value = maxValue-1; 
+		}
+		return value; 
 	}
 
 	public Boolean[] getAlertDays() {
@@ -116,27 +128,16 @@ public class Alarm implements Serializable {
 		return activeProperty;
 	}
 
-	public void synchronize() {
-		this.active = activeProperty.get();
-		// TODO create a class that saves all active alarms.
-		// If UI is closed, send all alarms to the server OR
-		// create a button to send all alarms manually
-		Logger.getLogger(getClass()).debug("Send alarm " + toString() + " to Server.");
-		try {
-			RaspyLarmClient.getInstance().sendToServer(this);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
 	public boolean isActivatePrompt() {
 		return activatePrompt;
 	}
+	
+	public void setActivatePrompt(boolean activatePrompt) {
+		this.activatePrompt = activatePrompt;
+	}
 
-	public void ring() {
-		activatePrompt = true;
-		synchronize();
-		activatePrompt = false;
+	public static int getNumberOfAlarms() {
+		return numberObAlarms;
 	}
 
 	@Override

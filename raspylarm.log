@@ -1,0 +1,891 @@
+2014-04-05 22:43:42.414 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 22:44:55.093 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 22:45:37.041 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 22:48:04.853 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 22:48:54.857 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 22:49:48.632 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 22:51:23.301 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 22:53:53.024 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 22:58:09.453 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:00:27.191 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:04:08.928 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:17:05.259 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:17:28.149 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:24:22.775 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:25:10.427 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:27:14.396 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:30:58.254 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:31:42.376 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:32:40.945 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:33:49.461 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:34:13.217 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:34:39.559 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:37:30.016 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:37:50.235 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-05 23:38:17.754 [DEBUG] model.Alarm:124 - Send alarm Alarm 1 to Server.
+2014-04-05 23:38:18.774 [ERROR] client.RaspyLarmClient:45 - Connection failed.
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:208)
+	at client.RaspyLarmClient.createSocket(RaspyLarmClient.java:41)
+	at client.RaspyLarmClient.sendToServer(RaspyLarmClient.java:29)
+	at model.Alarm.synchronize(Alarm.java:126)
+	at controller.AlarmController$7.handle(AlarmController.java:81)
+	at controller.AlarmController$7.handle(AlarmController.java:1)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:69)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:217)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:170)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:38)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:37)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:53)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:28)
+	at javafx.event.Event.fireEvent(Event.java:171)
+	at javafx.scene.Node.fireEvent(Node.java:6867)
+	at javafx.scene.control.Button.fire(Button.java:179)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:193)
+	at com.sun.javafx.scene.control.skin.SkinBase$4.handle(SkinBase.java:336)
+	at com.sun.javafx.scene.control.skin.SkinBase$4.handle(SkinBase.java:329)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:64)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:217)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:170)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:38)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:37)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:53)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:33)
+	at javafx.event.Event.fireEvent(Event.java:171)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3311)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3151)
+	at javafx.scene.Scene$MouseHandler.access$1900(Scene.java:3106)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1563)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2248)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:250)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:173)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:292)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:530)
+	at com.sun.glass.ui.View.notifyMouse(View.java:924)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.access$100(WinApplication.java:17)
+	at com.sun.glass.ui.win.WinApplication$3$1.run(WinApplication.java:67)
+	at java.lang.Thread.run(Thread.java:744)
+2014-04-05 23:38:42.382 [DEBUG] model.Alarm:124 - Send alarm Alarm 1 to Server.
+2014-04-05 23:38:43.384 [ERROR] client.RaspyLarmClient:45 - Connection failed.
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:208)
+	at client.RaspyLarmClient.createSocket(RaspyLarmClient.java:41)
+	at client.RaspyLarmClient.sendToServer(RaspyLarmClient.java:29)
+	at model.Alarm.synchronize(Alarm.java:126)
+	at controller.AlarmController$7.handle(AlarmController.java:81)
+	at controller.AlarmController$7.handle(AlarmController.java:1)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:69)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:217)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:170)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:38)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:37)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:53)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:28)
+	at javafx.event.Event.fireEvent(Event.java:171)
+	at javafx.scene.Node.fireEvent(Node.java:6867)
+	at javafx.scene.control.Button.fire(Button.java:179)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:193)
+	at com.sun.javafx.scene.control.skin.SkinBase$4.handle(SkinBase.java:336)
+	at com.sun.javafx.scene.control.skin.SkinBase$4.handle(SkinBase.java:329)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:64)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:217)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:170)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:38)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:37)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:53)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:33)
+	at javafx.event.Event.fireEvent(Event.java:171)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3311)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3151)
+	at javafx.scene.Scene$MouseHandler.access$1900(Scene.java:3106)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1563)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2248)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:250)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:173)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:292)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:530)
+	at com.sun.glass.ui.View.notifyMouse(View.java:924)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.access$100(WinApplication.java:17)
+	at com.sun.glass.ui.win.WinApplication$3$1.run(WinApplication.java:67)
+	at java.lang.Thread.run(Thread.java:744)
+2014-04-05 23:47:27.401 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.2.107
+port: 8080
+2014-04-08 10:46:14.969 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 11:52:54.602 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 11:55:23.820 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 11:56:43.884 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 11:57:37.395 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 11:58:12.854 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 11:59:08.571 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 11:59:29.412 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:01:01.868 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:02:49.275 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:05:08.680 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:05:27.754 [DEBUG] model.Alarm:129 - Send alarm Alarm 1 to Server.
+2014-04-08 12:05:28.769 [ERROR] client.RaspyLarmClient:45 - Connection failed.
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:208)
+	at client.RaspyLarmClient.createSocket(RaspyLarmClient.java:41)
+	at client.RaspyLarmClient.sendToServer(RaspyLarmClient.java:29)
+	at model.Alarm.synchronize(Alarm.java:131)
+	at model.Alarm.ring(Alarm.java:143)
+	at controller.AlarmController$6.handle(AlarmController.java:84)
+	at controller.AlarmController$6.handle(AlarmController.java:1)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:69)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:217)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:170)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:38)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:37)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:53)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:28)
+	at javafx.event.Event.fireEvent(Event.java:171)
+	at javafx.scene.Node.fireEvent(Node.java:6867)
+	at javafx.scene.control.Button.fire(Button.java:179)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:193)
+	at com.sun.javafx.scene.control.skin.SkinBase$4.handle(SkinBase.java:336)
+	at com.sun.javafx.scene.control.skin.SkinBase$4.handle(SkinBase.java:329)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:64)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:217)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:170)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:38)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:37)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:53)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:33)
+	at javafx.event.Event.fireEvent(Event.java:171)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3369)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3209)
+	at javafx.scene.Scene$MouseHandler.access$1900(Scene.java:3164)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1582)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2267)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:250)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:173)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:292)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:530)
+	at com.sun.glass.ui.View.notifyMouse(View.java:924)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.access$100(WinApplication.java:17)
+	at com.sun.glass.ui.win.WinApplication$3$1.run(WinApplication.java:67)
+	at java.lang.Thread.run(Thread.java:744)
+2014-04-08 12:08:31.356 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:10:12.631 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:15:16.030 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:17:04.256 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:24:52.981 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:26:10.843 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:29:58.183 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:31:06.988 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:31:23.426 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:31:45.996 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:40:05.420 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:42:27.098 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:45:44.681 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:49:09.462 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:52:45.122 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:55:51.034 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:56:38.568 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:58:45.448 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 12:59:31.543 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:01:56.019 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:02:29.621 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:03:23.804 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:04:54.984 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:05:40.059 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:08:28.868 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:09:57.723 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:27:23.703 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:27:47.562 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:30:13.185 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:31:08.006 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:32:11.873 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:36:00.464 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:37:36.598 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:38:00.221 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:40:27.286 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:43:05.217 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:46:31.493 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:47:28.450 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:48:57.601 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:49:47.397 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:53:21.028 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:58:15.977 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 13:58:56.642 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:15:37.008 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:17:02.101 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:20:46.356 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:23:04.409 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:23:43.731 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:26:50.204 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:28:17.500 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:36:43.356 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:38:44.930 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:39:34.345 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:40:22.955 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:43:51.684 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:45:06.697 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:46:28.629 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:48:12.879 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:48:51.118 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:49:49.476 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:51:18.894 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 15:58:37.523 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:02:58.026 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:04:14.423 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:07:25.768 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:07:56.656 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:10:05.028 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:10:38.970 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:12:13.124 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:13:42.013 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:18:07.306 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:20:27.897 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:21:18.592 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:25:18.501 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:30:00.369 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:32:45.884 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:33:47.827 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:37:16.051 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:39:39.418 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:40:36.697 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:43:07.216 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:43:51.379 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:49:25.115 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:50:43.865 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:52:59.425 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:55:09.896 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:55:40.006 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:56:51.633 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:57:56.717 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:59:09.401 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 16:59:40.155 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:00:17.422 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:01:05.449 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:02:26.214 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:04:45.597 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:07:44.011 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:10:49.363 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:11:51.302 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:14:01.580 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:14:32.434 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:16:16.520 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:17:40.643 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:19:41.546 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:20:01.018 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:20:17.857 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:21:59.571 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:24:45.008 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:25:27.197 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:26:41.926 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:29:40.246 [INFO] server.RaspyLarmServer:20 - Server initialized with port: 8080
+2014-04-08 17:29:40.262 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:29:55.543 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:30:44.496 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:31:00.639 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:31:16.485 [DEBUG] model.Alarm:137 - Send alarm Alarm 1 to Server.
+2014-04-08 17:31:16.500 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:31:16.564 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 1 to server.
+2014-04-08 17:31:16.588 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:31:16.594 [INFO] server.AlarmTimer:37 - Alarm  will be executed in 0 milliseconds.
+2014-04-08 17:31:16.604 [DEBUG] server.AlarmTimer:50 - Execute alarmCommand: calc.exe. Current Time: Tue Apr 08 17:31:16 CEST 2014
+2014-04-08 17:44:47.437 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:47:23.370 [INFO] server.RaspyLarmServer:20 - Server initialized with port: 8080
+2014-04-08 17:47:23.386 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:47:37.855 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:48:00.905 [DEBUG] model.AlarmManager:28 - Synchronize 1 alarms .Date: Tue Apr 08 17:48:00 CEST 2014
+2014-04-08 17:48:00.906 [DEBUG] model.Alarm:134 - Send alarm Alarm 1 to Server.
+2014-04-08 17:48:00.914 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:48:00.922 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 1 to server.
+2014-04-08 17:48:00.933 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:48:00.934 [DEBUG] server.Scheduler:36 - Call server startAlarm
+2014-04-08 17:48:15.360 [DEBUG] model.AlarmManager:28 - Synchronize 2 alarms .Date: Tue Apr 08 17:48:15 CEST 2014
+2014-04-08 17:48:15.361 [DEBUG] model.Alarm:134 - Send alarm Alarm 1 to Server.
+2014-04-08 17:48:15.362 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 1 to server.
+2014-04-08 17:48:15.362 [DEBUG] model.Alarm:134 - Send alarm Alarm 2 to Server.
+2014-04-08 17:48:15.363 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 2 to server.
+2014-04-08 17:48:15.364 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:48:15.365 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:48:15.368 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:48:15.368 [DEBUG] server.Scheduler:36 - Call server startAlarm
+2014-04-08 17:48:15.370 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:48:15.373 [DEBUG] server.Scheduler:36 - Call server startAlarm
+2014-04-08 17:49:15.009 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:49:26.945 [DEBUG] model.AlarmManager:28 - Synchronize 1 alarms .Date: Tue Apr 08 17:49:26 CEST 2014
+2014-04-08 17:49:26.946 [DEBUG] model.Alarm:136 - Send alarm Alarm 1 to Server.
+2014-04-08 17:49:26.953 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:49:26.962 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 1 to server.
+2014-04-08 17:49:26.962 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:49:26.963 [DEBUG] server.Scheduler:36 - Call server startAlarm
+2014-04-08 17:49:48.835 [INFO] server.RaspyLarmServer:20 - Server initialized with port: 8080
+2014-04-08 17:49:48.847 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:49:58.331 [DEBUG] model.AlarmManager:28 - Synchronize 1 alarms .Date: Tue Apr 08 17:49:58 CEST 2014
+2014-04-08 17:49:58.332 [DEBUG] model.Alarm:136 - Send alarm Alarm 1 to Server.
+2014-04-08 17:49:58.333 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 1 to server.
+2014-04-08 17:49:58.334 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:49:58.352 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:49:58.352 [DEBUG] server.Scheduler:36 - Call server startAlarm
+2014-04-08 17:50:57.658 [INFO] server.RaspyLarmServer:20 - Server initialized with port: 8080
+2014-04-08 17:50:57.673 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:51:04.227 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:51:19.367 [DEBUG] model.AlarmManager:28 - Synchronize 1 alarms .Date: Tue Apr 08 17:51:19 CEST 2014
+2014-04-08 17:51:19.368 [DEBUG] model.Alarm:136 - Send alarm Alarm 1 to Server.
+2014-04-08 17:51:19.376 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:51:19.384 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 1 to server.
+2014-04-08 17:51:19.396 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:51:19.396 [DEBUG] server.Scheduler:36 - Call server startAlarm
+2014-04-08 17:51:44.816 [DEBUG] model.AlarmManager:28 - Synchronize 2 alarms .Date: Tue Apr 08 17:51:44 CEST 2014
+2014-04-08 17:51:44.817 [DEBUG] model.Alarm:136 - Send alarm Alarm 1 to Server.
+2014-04-08 17:51:44.818 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:51:44.818 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 1 to server.
+2014-04-08 17:51:44.819 [DEBUG] model.Alarm:136 - Send alarm Alarm 2 to Server.
+2014-04-08 17:51:44.820 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 2 to server.
+2014-04-08 17:51:44.820 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:51:44.820 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:51:44.823 [DEBUG] server.Scheduler:36 - Call server startAlarm
+2014-04-08 17:51:44.823 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:51:44.823 [DEBUG] server.Scheduler:36 - Call server startAlarm
+2014-04-08 17:51:58.715 [DEBUG] model.AlarmManager:28 - Synchronize 2 alarms .Date: Tue Apr 08 17:51:58 CEST 2014
+2014-04-08 17:51:58.715 [DEBUG] model.Alarm:136 - Send alarm Alarm 1 to Server.
+2014-04-08 17:51:58.717 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:51:58.717 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 1 to server.
+2014-04-08 17:51:58.717 [DEBUG] model.Alarm:136 - Send alarm Alarm 2 to Server.
+2014-04-08 17:51:58.718 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:51:58.718 [DEBUG] server.Scheduler:36 - Call server startAlarm
+2014-04-08 17:51:58.718 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 2 to server.
+2014-04-08 17:51:58.719 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:51:58.722 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:51:58.724 [DEBUG] server.Scheduler:36 - Call server startAlarm
+2014-04-08 17:53:30.990 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:53:35.642 [DEBUG] model.AlarmManager:28 - Synchronize 1 alarms .Date: Tue Apr 08 17:53:35 CEST 2014
+2014-04-08 17:53:35.643 [DEBUG] model.Alarm:136 - Send alarm Alarm 1 to Server.
+2014-04-08 17:53:36.832 [ERROR] client.RaspyLarmClient:45 - Connection failed.
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:208)
+	at client.RaspyLarmClient.createSocket(RaspyLarmClient.java:41)
+	at client.RaspyLarmClient.sendToServer(RaspyLarmClient.java:29)
+	at model.Alarm.synchronize(Alarm.java:138)
+	at model.AlarmManager.synchronize(AlarmManager.java:30)
+	at controller.RaspyLarmUIController.synchronize(RaspyLarmUIController.java:65)
+	at controller.RaspyLarmUIController.access$1(RaspyLarmUIController.java:64)
+	at controller.RaspyLarmUIController$5.handle(RaspyLarmUIController.java:59)
+	at controller.RaspyLarmUIController$5.handle(RaspyLarmUIController.java:1)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:69)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:217)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:170)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:38)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:37)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:53)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:28)
+	at javafx.event.Event.fireEvent(Event.java:171)
+	at javafx.scene.Node.fireEvent(Node.java:6867)
+	at javafx.scene.control.Button.fire(Button.java:179)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:193)
+	at com.sun.javafx.scene.control.skin.SkinBase$4.handle(SkinBase.java:336)
+	at com.sun.javafx.scene.control.skin.SkinBase$4.handle(SkinBase.java:329)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:64)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:217)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:170)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:38)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:37)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:53)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:33)
+	at javafx.event.Event.fireEvent(Event.java:171)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3369)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3209)
+	at javafx.scene.Scene$MouseHandler.access$1900(Scene.java:3164)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1582)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2267)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:250)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:173)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:292)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:530)
+	at com.sun.glass.ui.View.notifyMouse(View.java:924)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.access$100(WinApplication.java:17)
+	at com.sun.glass.ui.win.WinApplication$3$1.run(WinApplication.java:67)
+	at java.lang.Thread.run(Thread.java:744)
+2014-04-08 17:53:41.959 [DEBUG] model.AlarmManager:28 - Synchronize 1 alarms .Date: Tue Apr 08 17:53:41 CEST 2014
+2014-04-08 17:53:41.959 [DEBUG] model.Alarm:136 - Send alarm Alarm 1 to Server.
+2014-04-08 17:53:42.981 [ERROR] client.RaspyLarmClient:45 - Connection failed.
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:208)
+	at client.RaspyLarmClient.createSocket(RaspyLarmClient.java:41)
+	at client.RaspyLarmClient.sendToServer(RaspyLarmClient.java:29)
+	at model.Alarm.synchronize(Alarm.java:138)
+	at model.AlarmManager.synchronize(AlarmManager.java:30)
+	at controller.RaspyLarmUIController.synchronize(RaspyLarmUIController.java:65)
+	at controller.RaspyLarmUIController.access$1(RaspyLarmUIController.java:64)
+	at controller.RaspyLarmUIController$5.handle(RaspyLarmUIController.java:59)
+	at controller.RaspyLarmUIController$5.handle(RaspyLarmUIController.java:1)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:69)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:217)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:170)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:38)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:37)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:53)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:28)
+	at javafx.event.Event.fireEvent(Event.java:171)
+	at javafx.scene.Node.fireEvent(Node.java:6867)
+	at javafx.scene.control.Button.fire(Button.java:179)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:193)
+	at com.sun.javafx.scene.control.skin.SkinBase$4.handle(SkinBase.java:336)
+	at com.sun.javafx.scene.control.skin.SkinBase$4.handle(SkinBase.java:329)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:64)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:217)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:170)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:38)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:37)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:35)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:92)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:53)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:33)
+	at javafx.event.Event.fireEvent(Event.java:171)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3369)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3209)
+	at javafx.scene.Scene$MouseHandler.access$1900(Scene.java:3164)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1582)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2267)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:250)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:173)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:292)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:530)
+	at com.sun.glass.ui.View.notifyMouse(View.java:924)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.access$100(WinApplication.java:17)
+	at com.sun.glass.ui.win.WinApplication$3$1.run(WinApplication.java:67)
+	at java.lang.Thread.run(Thread.java:744)
+2014-04-08 17:53:55.635 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:54:02.038 [INFO] server.RaspyLarmServer:20 - Server initialized with port: 8080
+2014-04-08 17:54:02.048 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:54:29.864 [DEBUG] model.Alarm:136 - Send alarm Alarm 1 to Server.
+2014-04-08 17:54:29.873 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:54:29.881 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 1 to server.
+2014-04-08 17:54:29.892 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:54:29.895 [INFO] server.AlarmTimer:37 - Alarm  will be executed in 0 milliseconds.
+2014-04-08 17:54:29.900 [DEBUG] server.AlarmTimer:50 - Execute alarmCommand: calc.exe. Current Time: Tue Apr 08 17:54:29 CEST 2014
+2014-04-08 17:54:33.429 [DEBUG] model.AlarmManager:28 - Synchronize 1 alarms .Date: Tue Apr 08 17:54:33 CEST 2014
+2014-04-08 17:54:33.429 [DEBUG] model.Alarm:136 - Send alarm Alarm 1 to Server.
+2014-04-08 17:54:33.431 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:54:33.431 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 1 to server.
+2014-04-08 17:54:33.432 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:54:33.432 [DEBUG] server.Scheduler:36 - Call server startAlarm
+2014-04-08 17:54:33.433 [INFO] server.AlarmTimer:37 - Alarm  will be executed in 140367000 milliseconds.
+2014-04-08 17:57:03.393 [INFO] server.RaspyLarmServer:20 - Server initialized with port: 8080
+2014-04-08 17:57:03.408 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:57:04.844 [DEBUG] model.ArgumentManager:21 - arguments: 
+ip: 192.168.178.23
+port: 8080
+2014-04-08 17:57:21.616 [DEBUG] model.AlarmManager:28 - Synchronize 1 alarms .Date: Tue Apr 08 17:57:21 CEST 2014
+2014-04-08 17:57:21.617 [DEBUG] model.Alarm:136 - Send alarm Alarm 1 to Server.
+2014-04-08 17:57:21.625 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:57:21.633 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 1 to server.
+2014-04-08 17:57:21.644 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:57:21.644 [DEBUG] server.Scheduler:36 - Call server startAlarm
+2014-04-08 17:57:21.647 [INFO] server.AlarmTimer:37 - Alarm  will be executed in 99000 milliseconds.
+2014-04-08 17:59:00.659 [DEBUG] server.AlarmTimer:50 - Execute alarmCommand: calc.exe. Current Time: Tue Apr 08 17:59:00 CEST 2014
+2014-04-08 17:59:30.377 [DEBUG] model.AlarmManager:28 - Synchronize 1 alarms .Date: Tue Apr 08 17:59:30 CEST 2014
+2014-04-08 17:59:30.377 [DEBUG] model.Alarm:136 - Send alarm Alarm 1 to Server.
+2014-04-08 17:59:30.378 [DEBUG] server.Server:21 - Waiting for new alarms...
+2014-04-08 17:59:30.379 [DEBUG] client.RaspyLarmClient:33 - Send Alarm Alarm 1 to server.
+2014-04-08 17:59:30.380 [DEBUG] server.Scheduler:30 - Alarm  connected.
+2014-04-08 17:59:30.380 [DEBUG] server.Scheduler:36 - Call server startAlarm
