@@ -36,6 +36,11 @@ public class RaspyLarmServer {
 	}
 
 	protected void startAlarmSheduling(Alarm alarm) {
+		AlarmTimer oldAlarm = runningAlarmTasks.get(alarm); 
+		if (oldAlarm != null) {
+			oldAlarm.cancel();
+			runningAlarmTasks.remove(alarm); 
+		}
 		final AlarmTimer alarmTimer = new AlarmTimer(alarm);
 		runningAlarmTasks.put(alarm, alarmTimer);
 		alarmTimer.start();
@@ -44,10 +49,11 @@ public class RaspyLarmServer {
 	protected void stopAlarm(Alarm alarm) {
 		final AlarmTimer alarmTimer = runningAlarmTasks.get(alarm);
 		if (alarmTimer != null) {
-			LOGGER.debug("Call alarm cancel method.");
 			alarmTimer.cancel();
+			LOGGER.debug("Call alarm cancel method.");
+			runningAlarmTasks.remove(alarm); 
 		} else {
-			LOGGER.error("Alarm was cancel, but wasn't activated.");
+			LOGGER.error("Alarm " + alarm.toString() + " was cancel, but wasn't activated.");
 		}
 	}
 }

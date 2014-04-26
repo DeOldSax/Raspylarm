@@ -2,13 +2,10 @@ package model;
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.UUID;
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 
@@ -17,17 +14,18 @@ public class Alarm implements Serializable {
 	private final UUID uuid = UUID.randomUUID();
 	private static final long serialVersionUID = 1729409145617866229L;
 	private static int numberObAlarms = 0;
-	private boolean active = true;
+	private transient Property<Number> alarmHourProperty;
+	private transient Property<Number> alarmMinuteProperty;
+	private transient Property<String> alarmNameProperty;
+	private transient Property<Boolean> activeProperty;
+	private transient Property<String> commandProperty;
 	private int alarmHour;
 	private int alarmMinute;
-	private transient IntegerProperty alarmHourProperty;
-	private transient IntegerProperty alarmMinuteProperty;
-	private transient StringProperty alarmName;
-	private transient BooleanProperty activeProperty;
+	private String alarmName; 
+	private boolean active = true;
+	private String command;
 	private final Boolean[] alertDays;
 	private boolean activatePrompt = false;
-	private transient StringProperty commandProperty;
-	private String command;
 
 	public Alarm() {
 		numberObAlarms++;
@@ -36,7 +34,8 @@ public class Alarm implements Serializable {
 		alarmHourProperty = new SimpleIntegerProperty(Calendar.getInstance().get(Calendar.HOUR_OF_DAY));
 		alarmMinuteProperty = new SimpleIntegerProperty(Calendar.getInstance().get(Calendar.MINUTE));
 		activeProperty = new SimpleBooleanProperty(true);
-		alarmName = new SimpleStringProperty("Alarm " + numberObAlarms);
+		alarmNameProperty = new SimpleStringProperty("Alarm " + numberObAlarms);
+		alarmName = alarmNameProperty.getValue(); 
 		commandProperty = new SimpleStringProperty();
 		
 		alertDays = new Boolean[7];
@@ -67,14 +66,19 @@ public class Alarm implements Serializable {
 				active = arg2; 
 			}
 		});
+		alarmNameProperty.addListener(new ChangeListener<String>() {
+			public void changed(ObservableValue<? extends String> arg0, String arg1, String arg2) {
+				alarmName = arg2; 
+			}
+		});
 	}
 	
-	private int checkTimeFormat(int time, int minValue, int maxValue, IntegerProperty p) {
-		int value = p.get(); 
+	private int checkTimeFormat(int time, int minValue, int maxValue, Property<Number> p) {
+		int value = (Integer)p.getValue(); 
 		if (time == maxValue) {
-			p.set(0);
+			p.setValue(0);
 		} else if (time == minValue) {
-			p.set(maxValue-1);
+			p.setValue(maxValue-1);
 			value = maxValue-1; 
 		}
 		return value; 
@@ -84,16 +88,16 @@ public class Alarm implements Serializable {
 		return alertDays;
 	}
 
-	public IntegerProperty alarmHourProperty() {
+	public Property<Number> alarmHourProperty() {
 		return alarmHourProperty;
 	}
 
-	public IntegerProperty alarmMinuteProperty() {
+	public Property<Number> alarmMinuteProperty() {
 		return alarmMinuteProperty;
 	}
 
 	public Property<String> nameProperty() {
-		return alarmName;
+		return alarmNameProperty;
 	}
 
 	public int getAlarmHour() {
@@ -142,10 +146,7 @@ public class Alarm implements Serializable {
 
 	@Override
 	public String toString() {
-		if (alarmName == null) {
-			return "";
-		}
-		return alarmName.get();
+		return alarmName + " [alarmtime: " + alarmHour + ":" + alarmMinute + "]";
 	}
 
 	@Override

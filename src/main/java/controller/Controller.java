@@ -81,7 +81,7 @@ public class Controller implements Initializable {
 
 	public void initialize(URL url, ResourceBundle rb) {
 		uiController = new RaspyLarmUIController(this, createNewAlarm, activateAlarmOnRaspy, synchronizeButton, alarms);
-		alarmController = new AlarmController(this, monday, tuesday, wednesday, thursday, friday, saturday, sunday, plusHour, plusMinute,
+		alarmController = new AlarmController(monday, tuesday, wednesday, thursday, friday, saturday, sunday, plusHour, plusMinute,
 				minusHour, minusMinute, alarmName, alarmCommand, alarmHour, alarmMinute, executeCommand, save);
 	}
 

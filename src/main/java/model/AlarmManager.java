@@ -45,7 +45,7 @@ public class AlarmManager {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		LOGGER.debug("Send alarm " + toString() + " to Server.");
+		LOGGER.debug("Send alarm " + alarm.toString() + " to Server.");
 	}
 
 	public void ring(Alarm alarm) {

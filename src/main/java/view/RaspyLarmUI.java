@@ -9,6 +9,7 @@ import model.ArgumentManager;
 
 import org.apache.log4j.PropertyConfigurator;
 
+
 public class RaspyLarmUI extends Application {
 
 	public static void main(String[] args) {
@@ -19,7 +20,7 @@ public class RaspyLarmUI extends Application {
 
 	@Override
 	public void start(Stage stage) throws Exception {
-		final Parent root = FXMLLoader.load(getClass().getResource("raspylarm.fxml"));
+		final Parent root = FXMLLoader.load(RaspyLarmUI.class.getResource("raspylarm.fxml"));
 		Scene scene = new Scene(root);
 		stage.setTitle("Raspylarm");
 		stage.setScene(scene);

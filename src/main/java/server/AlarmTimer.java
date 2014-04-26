@@ -41,7 +41,7 @@ class AlarmTimer extends Timer {
 	public void cancel() {
 		super.cancel();
 		Logger.getLogger(getClass()).debug(
-				"Alarm " + alarm.toString() + "<time <" + alarm.getAlarmHour() + "><" + alarm.getAlarmMinute() + "> canceled.");
+				"Alarm " + alarm.toString() + " canceled.");
 	}
 
 	private class AlarmRinger extends TimerTask {
