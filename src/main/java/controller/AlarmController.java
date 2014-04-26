@@ -156,49 +156,16 @@ public class AlarmController {
 	private void bind(Alarm alarm) {
 		alarmProperty = new SimpleObjectProperty<Alarm>(alarm); 
 
-		// bind alarmCommand
-//		NestedObjectProperty<Alarm, String> command = new NestedObjectProperty<Alarm, String>(
-//			alarmProperty,
-//				new Java8F<Alarm, Property<String>>() {
-//					@Override
-//					public Property<String> apply(Alarm value) {
-//						return value.commandProperty();
-//					}
-//				}, true); 
 		Property<String> buildProperty = Nestings.on(alarmProperty).nest(alarmProperty -> alarmProperty.commandProperty()).buildProperty();
 		alarmCommand.textProperty().bindBidirectional(buildProperty);
 		
-		// bind alarmName
-//		NestedObjectProperty<Alarm, String> name = new NestedObjectProperty<Alarm, String>(alarmProperty,
-//				new Java8F<Alarm, Property<String>>() {
-//				@Override
-//					public Property<String> apply(Alarm value) {
-//						return value.nameProperty();
-//					}
-//				}, true); 
 		Property<String> nestedName = Nestings.on(alarmProperty).nest(alarmProperty -> alarmProperty.nameProperty()).buildProperty();
 		alarmName.textProperty().bindBidirectional(nestedName);
 		
-		// hour binding
-//		NestedObjectProperty<Alarm, Number> nestedAlarmHour = new NestedObjectProperty<Alarm, Number>(alarmProperty,
-//				new Java8F<Alarm, Property<Number>>() {
-//				@Override
-//					public Property<Number> apply(Alarm value) {
-//						return value.alarmHourProperty(); 
-//					}
-//				}, true); 
 		TimeStringConverter hourConverter = new TimeStringConverter(alarmHour, 0, 23);
 		Property<Number> nestedAlarmHour = Nestings.on(alarmProperty).nest(alarmProperty -> alarmProperty.alarmHourProperty()).buildProperty();
 		Bindings.bindBidirectional(alarmHour.textProperty(), nestedAlarmHour, hourConverter);
 		
-		// minute binding
-//		NestedObjectProperty<Alarm, Number> nestedAlarmMinute = new NestedObjectProperty<Alarm, Number>(alarmProperty,
-//				new Java8F<Alarm, Property<Number>>() {
-//				@Override
-//					public Property<Number> apply(Alarm value) {
-//						return value.alarmMinuteProperty(); 
-//					}
-//				}, true); 
 		Property<Number> nestedAlarmMinute = Nestings.on(alarmProperty).nest(alarmProperty -> alarmProperty.alarmMinuteProperty()).buildProperty();
 		TimeStringConverter minuteConverter = new TimeStringConverter(alarmMinute, 0, 59);
 		Bindings.bindBidirectional(alarmMinute.textProperty(), nestedAlarmMinute, minuteConverter);
